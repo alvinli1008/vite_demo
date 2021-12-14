@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 import demo from './models/demo';
 
 export default async ({ routes, models, messages, locale }) => {
@@ -15,5 +15,5 @@ export default async ({ routes, models, messages, locale }) => {
     );
 
   Object.assign(models, { demo });
-  Object.assign(messages, (await import(`./locales/` + locale)).default)
+  Object.assign(messages, (await import(`./locales/${locale}.js`)).default);
 };

@@ -12,5 +12,5 @@ export default async ({ routes, models, messages, locale }) => {
         }
       ]
     );
-  Object.assign(messages, (await import(`./locales/` + locale)).default);
+  Object.assign(messages, (await import(`./locales/${locale}.js`)).default);
 };

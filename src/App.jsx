@@ -1,4 +1,4 @@
-import React, { useState, useEffect, Suspense, useRef } from 'react';
+import React, { useState, useEffect, Suspense } from 'react';
 import { BrowserRouter as Router, Switch } from 'react-router-dom';
 import enUSLocaleProvider from 'antd/lib/locale-provider/en_US';
 import zhCNLocaleProvider from 'antd/lib/locale-provider/zh_CN';

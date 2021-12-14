@@ -3,6 +3,7 @@ import { Button } from 'antd';
 import { toJS } from 'mobx';
 import { observer, inject } from 'mobx-react';
 import { injectIntl } from 'react-intl';
+import PropTypes from 'prop-types';
 
 function Demo({ demo, intl }) {
   console.log('demo', toJS(demo));
@@ -20,5 +21,10 @@ function Demo({ demo, intl }) {
     </div>
   );
 }
+
+Demo.propTypes = {
+  demo: PropTypes.object,
+  intl: PropTypes.object
+};
 
 export default injectIntl(inject('demo')(observer(Demo)));
