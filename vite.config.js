@@ -8,11 +8,6 @@ import antOverride from './theme.config';
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  esbuild: {
-    jsxFactory: 'React.createElement',
-    jsxFragment: 'React.Fragment',
-    // include: ['.js', '.jsx'],
-  },
   plugins: [
     vitePluginImp({
       libList: [
