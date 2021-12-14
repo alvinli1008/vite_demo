@@ -3,12 +3,12 @@ import Home from './components/Home';
 const homeRoutes = [
   {
     path: '/',
-    exact: true,
+    exact: true
     // component: () => <div />
   }
 ];
 
-export default ({ routes }) => {
+export default async ({ routes, messages, locale }) => {
   routes.push(
     ...[
       {
@@ -18,4 +18,5 @@ export default ({ routes }) => {
       }
     ]
   );
+  Object.assign(messages, (await import(`./locales/` + locale)).default);
 };

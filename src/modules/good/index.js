@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default ({ routes, models }) => {
+export default async ({ routes, models, messages, locale }) => {
   routes
     .filter((r) => r.path === '/')[0]
     .routes.push(
@@ -12,4 +12,5 @@ export default ({ routes, models }) => {
         }
       ]
     );
+  Object.assign(messages, (await import(`./locales/` + locale)).default);
 };

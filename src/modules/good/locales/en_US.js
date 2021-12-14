@@ -1,3 +1,3 @@
 export default {
-  'demo.': '1'
+  'good.': '1'
 }
